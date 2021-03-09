@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>Different People Have Different Attitudes About COVID-19</title>
+</head>
+<body>
+ 
+    <h1>Attitude</h1>
+    
+    {% for row in rows %}
+    <p>ID:{{row["ID"]}}
+       <b> <a href={{ url_for('answer_details') }}>answer_details</a></b> |  
+       {{row["Time"]}} |
+        {{ row["language"]}} |
+       {{row['Country']}}	
+    </p>
+    {% endfor %}
+</body>
+</html>
